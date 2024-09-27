@@ -1,0 +1,146 @@
+[
+  {
+    "id": 201,
+    "typeId": 1,
+    "vacationType": null,
+    "fromDate": "2024-08-22",
+    "toDate": "2024-08-23",
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "name": "Adham Bahaa",
+      "casualDays": 3,
+      "annualDays": 24,
+      "email": "adham@gmail.com",
+      "managerId": 2
+    },
+    "statusId": 1,
+    "status": null
+  },
+  {
+    "id": 202,
+    "typeId": 2,
+    "vacationType": null,
+    "fromDate": "2024-08-13",
+    "toDate": "2024-08-23",
+    "userId": 2,
+    "user": {
+      "id": 2,
+      "name": "Mohamed Rabie",
+      "casualDays": 3,
+      "annualDays": 24,
+      "email": "Rabie@gmail.com",
+      "managerId": null
+    },
+    "statusId": 1,
+    "status": null
+  },
+  {
+    "id": 203,
+    "typeId": 1,
+    "vacationType": null,
+    "fromDate": "2024-08-03",
+    "toDate": "2024-08-04",
+    "userId": 2,
+    "user": {
+      "id": 2,
+      "name": "Mohamed Rabie",
+      "casualDays": 3,
+      "annualDays": 24,
+      "email": "Rabie@gmail.com",
+      "managerId": null
+    },
+    "statusId": 1,
+    "status": null
+  },
+  {
+    "id": 204,
+    "typeId": 2,
+    "vacationType": null,
+    "fromDate": "2024-08-02",
+    "toDate": "2024-08-12",
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "name": "Adham Bahaa",
+      "casualDays": 3,
+      "annualDays": 24,
+      "email": "adham@gmail.com",
+      "managerId": 2
+    },
+    "statusId": 1,
+    "status": null
+  },
+  {
+    "id": 205,
+    "typeId": 2,
+    "vacationType": null,
+    "fromDate": "2024-09-02",
+    "toDate": "2024-09-12",
+    "userId": 4,
+    "user": {
+      "id": 4,
+      "name": "Khaled Ismail",
+      "casualDays": 2,
+      "annualDays": 13,
+      "email": "Ismail@gmail.com",
+      "managerId": 2
+    },
+    "statusId": 1,
+    "status": null
+  },
+  {
+    "id": 213,
+    "typeId": 1,
+    "vacationType": null,
+    "fromDate": "2024-09-22",
+    "toDate": "2024-09-23",
+    "userId": 5,
+    "user": {
+      "id": 5,
+      "name": "Carlos Alcaraz",
+      "casualDays": 2,
+      "annualDays": 17,
+      "email": "Alcaraz@gmail.com",
+      "managerId": 3
+    },
+    "statusId": 3,
+    "status": null
+  },
+  {
+    "id": 214,
+    "typeId": 1,
+    "vacationType": null,
+    "fromDate": "2024-10-12",
+    "toDate": "2024-10-13",
+    "userId": 4,
+    "user": {
+      "id": 4,
+      "name": "Khaled Ismail",
+      "casualDays": 2,
+      "annualDays": 13,
+      "email": "Ismail@gmail.com",
+      "managerId": 2
+    },
+    "statusId": 2,
+    "status": null
+  },
+  {
+    "id": 215,
+    "typeId": 1,
+    "vacationType": null,
+    "fromDate": "2024-10-12",
+    "toDate": "2024-10-13",
+    "userId": 4,
+    "user": {
+      "id": 4,
+      "name": "Khaled Ismail",
+      "casualDays": 2,
+      "annualDays": 13,
+      "email": "Ismail@gmail.com",
+      "managerId": 2
+    },
+    "statusId": 4,
+    "status": null
+  }
+]

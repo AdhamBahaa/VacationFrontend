@@ -1,0 +1,82 @@
+<app-top-bar></app-top-bar>
+<div class="container">
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <h2>Approve or Reject</h2>
+      <form #requestForm="ngForm">
+        <div class="formbold-mb-5 custom-select">
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5 w-full">
+                <label for="fname" class="formbold-form-label">Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="name"
+                  [placeholder]="request.user?.name"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="id" class="formbold-form-label">Request Id</label>
+                <input
+                  type="text"
+                  id="id"
+                  name="Id"
+                  [placeholder]="request.id"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+
+          <label for="types" class="formbold-form-label">Vacation type</label>
+          <input
+            type="text"
+            id="types"
+            name="typeId"
+            [placeholder]="request.typeId == 1 ? 'Casual' : 'Annual'"
+            class="typeVac"
+            readonly
+          />
+
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5 w-full">
+                <label for="fromDate" class="formbold-form-label"
+                  >From Date</label
+                >
+                <input
+                  type="text"
+                  id="fromDate"
+                  name="fromDate"
+                  [placeholder]="request.fromDate"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="toDate" class="formbold-form-label">To Date</label>
+                <input
+                  type="text"
+                  id="toDate"
+                  name="toDate"
+                  [placeholder]="request.toDate"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttonsDiv">
+          <button class="button button1" (click)="approve()">Approve</button>
+          <button class="button button3" (click)="reject()">Reject</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

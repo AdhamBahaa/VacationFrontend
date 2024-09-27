@@ -1,0 +1,22 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<nav>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="assets/images/logo-1.png" alt="logo" />
+    </div>
+    <div class="user">
+      <!-- <img src="assets/images/profile.png" alt="Profile icon" /> -->
+      Hello, <span class="user-span">{{ user?.name }}</span>
+    </div>
+    <div class="toHome">
+      <a routerLink="/home"><i class="fa-solid fa-house"></i> Home </a>
+    </div>
+  </div>
+</nav>

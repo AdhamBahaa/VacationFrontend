@@ -1,0 +1,132 @@
+<app-top-bar></app-top-bar>
+<div class="pageWidth">
+  <div class="userDiv">
+    <table class="fl-table">
+      <tr>
+        <th>Casual Days</th>
+        <td>{{ user?.casualDays }}</td>
+      </tr>
+      <tr>
+        <th>Annual Days</th>
+        <td>{{ user?.annualDays }}</td>
+      </tr>
+    </table>
+  </div>
+  <hr />
+  <div class="table-wrapper">
+    <div class="table-heading">
+      <div>
+        <h1><b>My Requests</b></h1>
+      </div>
+      <div class="buttonDiv">
+        <button
+          class="button button1"
+          (click)="router.navigate(['/add-request'])"
+        >
+          Add New Request
+        </button>
+      </div>
+    </div>
+    <table class="fl-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Type</th>
+          <th>From Date</th>
+          <th>To Date</th>
+          <th>Status</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of requests">
+          <td>{{ request.id }}</td>
+          <td>{{ request.typeId == 1 ? "Casual" : "Annual" }}</td>
+          <td>{{ request.fromDate }}</td>
+          <td>{{ request.toDate }}</td>
+          <td>
+            {{
+              request.statusId == 1
+                ? "Pending"
+                : request.statusId == 2
+                ? "Approved"
+                : request.statusId == 3
+                ? "Rejected"
+                : "Completed"
+            }}
+          </td>
+          <td
+            *ngIf="
+              request.statusId !== 4 &&
+              request.statusId !== 3 &&
+              request.statusId !== 2
+            "
+          >
+            <button
+              (click)="
+                router.navigate(['/edit-request'], {
+                  state: { data: this.request }
+                })
+              "
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-container *ngIf="requestsToApprove.length > 0">
+    <hr />
+    <div class="table-wrapper">
+      <table class="fl-table">
+        <caption>
+          <b>Requests to approve or reject</b>
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th>Status</th>
+            <th>Approval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let request of requestsToApprove">
+            <tr *ngIf="request.statusId == 1">
+              <td>{{ request.user?.name }}</td>
+              <td>{{ request.typeId == 1 ? "Casual" : "Annual" }}</td>
+              <td>{{ request.fromDate }}</td>
+              <td>{{ request.toDate }}</td>
+              <td>
+                {{
+                  request.statusId == 1
+                    ? "Pending"
+                    : request.statusId == 2
+                    ? "Approved"
+                    : request.statusId == 3
+                    ? "Rejected"
+                    : "Completed"
+                }}
+              </td>
+              <td>
+                <button
+                  (click)="
+                    router.navigate(['/approve-request'], {
+                      state: { data: this.request }
+                    })
+                  "
+                >
+                  Approve or Reject
+                </button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+</div>
+<router-outlet></router-outlet>

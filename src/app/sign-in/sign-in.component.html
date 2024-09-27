@@ -1,0 +1,57 @@
+<body>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
+        <form class="login100-form validate-form">
+          <img class="image" src="assets/images/logo-1.png" alt="logo" />
+          <div
+            class="wrap-input100 validate-input"
+            data-validate="Valid email is: a@b.c"
+          >
+            <input
+              class="input100"
+              type="email"
+              required
+              email
+              autocomplete="email"
+              name="email"
+              [(ngModel)]="credentials.email"
+            />
+            <span class="focus-input100" data-placeholder="Email"></span>
+          </div>
+
+          <div
+            class="wrap-input100 validate-input"
+            data-validate="Enter password"
+          >
+            <span class="btn-show-pass"> </span>
+            <input
+              class="input100"
+              type="password"
+              id="pass"
+              required
+              name="password"
+              [(ngModel)]="credentials.password"
+            />
+            <span class="focus-input100" data-placeholder="Password"></span>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button
+                class="login100-form-btn"
+                type="submit"
+                (click)="signIn()"
+              >
+                Login
+              </button>
+            </div>
+            <!-- <div class="signInError">Sign-in failed. Please try again.</div> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<router-outlet></router-outlet>

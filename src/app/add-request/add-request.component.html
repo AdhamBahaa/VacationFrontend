@@ -1,0 +1,52 @@
+<app-top-bar></app-top-bar>
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <h2>Vacation Request</h2>
+    <form #requestForm="ngForm" (ngSubmit)="onSubmit(requestForm.value)">
+      <div class="formbold-mb-5 custom-select">
+        <label for="types" class="formbold-form-label">Vacation type</label>
+
+        <select name="typeId" id="types" [(ngModel)]="request.typeId" required>
+          <option value="1">Casual</option>
+          <option value="2">Annual</option>
+        </select>
+      </div>
+
+      <div class="flex flex-wrap formbold--mx-3">
+        <div class="w-full sm:w-half formbold-px-3">
+          <div class="formbold-mb-5 w-full">
+            <label for="date" class="formbold-form-label"> From date </label>
+            <input
+              type="date"
+              name="fromDate"
+              id="date"
+              required
+              class="formbold-form-input"
+              [(ngModel)]="request.fromDate"
+              [attr.min]="today"
+              (change)="onFromDateChange($event)"
+            />
+          </div>
+        </div>
+        <div class="w-full sm:w-half formbold-px-3">
+          <div class="formbold-mb-5">
+            <label for="time" class="formbold-form-label"> To date </label>
+            <input
+              type="date"
+              name="toDate"
+              id="date"
+              class="formbold-form-input"
+              required
+              [(ngModel)]="request.toDate"
+              [attr.min]="minDate"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" class="formbold-btn">Add Vacation Request</button>
+      </div>
+    </form>
+  </div>
+</div>

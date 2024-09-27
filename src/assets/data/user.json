@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Adham Bahaa",
+    "casualDays": 3,
+    "annualDays": 24,
+    "email": "adham@gmail.com",
+    "managerId": 2
+  },
+  {
+    "id": 2,
+    "name": "Mohamed Rabie",
+    "casualDays": 3,
+    "annualDays": 24,
+    "email": "Rabie@gmail.com",
+    "managerId": null
+  },
+  {
+    "id": 3,
+    "name": "John Doe",
+    "casualDays": 5,
+    "annualDays": 20,
+    "email": "Doe@gmail.com",
+    "managerId": null
+  },
+  {
+    "id": 4,
+    "name": "Khaled Ismail",
+    "casualDays": 2,
+    "annualDays": 13,
+    "email": "Ismail@gmail.com",
+    "managerId": 2
+  },
+  {
+    "id": 5,
+    "name": "Carlos Alcaraz",
+    "casualDays": 2,
+    "annualDays": 17,
+    "email": "Alcaraz@gmail.com",
+    "managerId": 3
+  }
+]
